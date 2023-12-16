@@ -1,0 +1,418 @@
+/var/spool/slurm/spool/job177008/slurm_script: line 17: ulimit: open files: cannot modify limit: Operation not permitted
+3: gpu031.ihep.ac.cn
+1: gpu017.ihep.ac.cn
+2: gpu017.ihep.ac.cn
+0: gpu017.ihep.ac.cn
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-c8eed28e-aee2-6a6a-9751-8500b0767218)
+GPU 1: Tesla V100-SXM2-32GB (UUID: GPU-67ad1c12-7500-ddb8-d1ef-a3682a45d069)
+Allocate GPU cards : 0,1
+Sat Dec 16 15:15:37 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 515.65.01    Driver Version: 515.65.01    CUDA Version: 11.7     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:1C:00.0 Off |                    0 |
+| N/A   28C    P0    41W / 300W |      0MiB / 32768MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-SXM2...  On   | 00000000:B4:00.0 Off |                    0 |
+| N/A   28C    P0    43W / 300W |      0MiB / 32768MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+/hpcfs/cepc/higgsgpu/wuzuofei/miniconda3/envs/weaver/bin/python
+Matplotlib created a temporary cache directory at /tmp/matplotlib-04qthylz because the default path (/afs/ihep.ac.cn/users/w/wuzuofei/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+The number of GPU(s) is 2!
+TensorBoard log path is /hpcfs/cepc/higgsgpu/wuzuofei/weaver/particle_transformer-main/networks/my_script/PFN/my_script_DDP/log_tensorboard/log_DDP_test
+***************load tuples successfully ----->0, Hbb.root, 10000****************
+***************load tuples successfully ----->0, Hbb.root, 20000****************
+***************load tuples successfully ----->0, Hbb.root, 30000****************
+***************load tuples successfully ----->1, Hcc.root, 10000****************
+***************load tuples successfully ----->1, Hcc.root, 20000****************
+***************load tuples successfully ----->1, Hcc.root, 30000****************
+***************load tuples successfully ----->2, Hgg.root, 10000****************
+***************load tuples successfully ----->2, Hgg.root, 20000****************
+***************load tuples successfully ----->2, Hgg.root, 30000****************
+***************load tuples successfully ----->3, Hww.root, 10000****************
+***************load tuples successfully ----->3, Hww.root, 20000****************
+***************load tuples successfully ----->3, Hww.root, 30000****************
+***************load tuples successfully ----->4, Hzz.root, 10000****************
+***************load tuples successfully ----->4, Hzz.root, 20000****************
+***************load tuples successfully ----->4, Hzz.root, 30000****************
+***************load tuples successfully ----->5, Pll.root, 10000****************
+***************load tuples successfully ----->5, Pll.root, 20000****************
+***************load tuples successfully ----->5, Pll.root, 30000****************
+**************load tuples successfully ----->6, Pww_l.root, 10000***************
+**************load tuples successfully ----->6, Pww_l.root, 20000***************
+**************load tuples successfully ----->6, Pww_l.root, 30000***************
+**************load tuples successfully ----->7, Pzz_l.root, 10000***************
+**************load tuples successfully ----->7, Pzz_l.root, 20000***************
+**************load tuples successfully ----->7, Pzz_l.root, 30000***************
+**************load tuples successfully ----->8, Pzz_sl.root, 10000**************
+**************load tuples successfully ----->8, Pzz_sl.root, 20000**************
+**************load tuples successfully ----->8, Pzz_sl.root, 30000**************
+
+    suffix:        DDP_test
+    gpu_nums:      2
+    process:       ['Hbb', 'Hcc', 'Hgg', 'Hww', 'Hzz', 'Pll', 'Pww_l', 'Pzz_l', 'Pzz_sl']
+    tra_val_test:  [0.8, 0.1, 0.1]
+    numdata_ec     30000
+    
+
+        ⠀⠀⠀⠀⠀⣀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+        ⠀⠀⠀⠀⡀⣯⡭⠀⢟⢿⣷⣄⠀⠀⠀⠀⠀⠀⠀
+        ⠀⠀⠀⢠⣼⠏⠴⠶⠈⠘⠻⣘⡆⠀⠀⠀⠀⠀⠀
+        ⠀⠀⣠⣾⡟⠁⡀⠀⠀⠀⡼⠡⠛⡄⠀⠀⠀⠀⠀
+        ⠀⠀⠙⠻⢴⠞⠁⠀⠊⠀⠀⠀⠈⠉⢄⠀⠀⠀⠀
+        ⠀⠀⠀⠀⢀⠀⠀⠀⢃⠄⠂⠀⠀⢀⠞⢣⡀⠀⠀           
+        ⠀⠀⠀⠀⡌⠁⠀⠀⠀⢀⠀⠐⠈⠀⠀⡺⠙⡄⠀   
+        ⠀⠀⠀⠀⡿⡀⠀⠀⠀⠁⠀⠴⠁⠀⠚⠀⡸⣷⠀
+        ⠀⠀⠀⠀⢹⠈⠀⠀⠀⠀⠔⠁⠀⢀⠄⠀⠁⢻⣧
+        ⠀⠀⠀⠀⣸⠀⢠⣇⠀⢘⣬⠀⠀⣬⣠⣦⣼⣿⠏
+        ⡠⠐⢂⡡⠾⢀⡾⠋⠉⠉⡇⠀⢸⣿⣿⣿⡿⠃⠀
+        ⠉⢉⡠⢰⠃⠸⠓⠒⠂⠤⡇⠀⡿⠟⠛⠁⠀⠀⠀
+        ⠘⢳⡞⣅⡰⠁⠀⠀⠀⢀⠇⠀⡇⠀⠀⠀⠀⠀⠀
+        ⠀⠀⠉⠉⠀⠀⠀⠀⢀⣌⢀⢀⠀⠀⠀⠀⠀⠀⠀
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠘⠊⠀⠀⠀⠀⠀⠀⠀
+    Cheems shows up and tells you that the program has started!!!
+    Current Process is 1 !!!
+        
+
+        ⠀⠀⠀⠀⠀⣀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+        ⠀⠀⠀⠀⡀⣯⡭⠀⢟⢿⣷⣄⠀⠀⠀⠀⠀⠀⠀
+        ⠀⠀⠀⢠⣼⠏⠴⠶⠈⠘⠻⣘⡆⠀⠀⠀⠀⠀⠀
+        ⠀⠀⣠⣾⡟⠁⡀⠀⠀⠀⡼⠡⠛⡄⠀⠀⠀⠀⠀
+        ⠀⠀⠙⠻⢴⠞⠁⠀⠊⠀⠀⠀⠈⠉⢄⠀⠀⠀⠀
+        ⠀⠀⠀⠀⢀⠀⠀⠀⢃⠄⠂⠀⠀⢀⠞⢣⡀⠀⠀           
+        ⠀⠀⠀⠀⡌⠁⠀⠀⠀⢀⠀⠐⠈⠀⠀⡺⠙⡄⠀   
+        ⠀⠀⠀⠀⡿⡀⠀⠀⠀⠁⠀⠴⠁⠀⠚⠀⡸⣷⠀
+        ⠀⠀⠀⠀⢹⠈⠀⠀⠀⠀⠔⠁⠀⢀⠄⠀⠁⢻⣧
+        ⠀⠀⠀⠀⣸⠀⢠⣇⠀⢘⣬⠀⠀⣬⣠⣦⣼⣿⠏
+        ⡠⠐⢂⡡⠾⢀⡾⠋⠉⠉⡇⠀⢸⣿⣿⣿⡿⠃⠀
+        ⠉⢉⡠⢰⠃⠸⠓⠒⠂⠤⡇⠀⡿⠟⠛⠁⠀⠀⠀
+        ⠘⢳⡞⣅⡰⠁⠀⠀⠀⢀⠇⠀⡇⠀⠀⠀⠀⠀⠀
+        ⠀⠀⠉⠉⠀⠀⠀⠀⢀⣌⢀⢀⠀⠀⠀⠀⠀⠀⠀
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠘⠊⠀⠀⠀⠀⠀⠀⠀
+    Cheems shows up and tells you that the program has started!!!
+    Current Process is 0 !!!
+        
+
+        classes:       9
+        epochs:        20
+        batchsize:     5000
+        lr:            0.001
+        use_bn:        True
+        Phi_sizes:     (100, 100, 128)
+        F_sizes:       (100, 100, 100)
+        
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:08<00:16,  8.49s/it] 33%|███▎      | 1/3 [00:08<00:16,  8.49s/it] 67%|██████▋   | 2/3 [00:08<00:03,  3.67s/it] 67%|██████▋   | 2/3 [00:08<00:03,  3.67s/it]100%|██████████| 3/3 [00:08<00:00,  2.96s/it]100%|██████████| 3/3 [00:08<00:00,  2.96s/it]
+
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=3500
+train : local_rank=1, metric[0]=tensor(344006.7500, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(1577., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+train_reduce : local_rank=1, metric[0]=tensor(344006.7500, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(1577., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+validation : local_rank=1, metric[0]=tensor(212433.0469, device='cuda:1'), metric[1]=tensor(1456., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=3500
+train : local_rank=0, metric[0]=tensor(346587.4062, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(1550., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+train_reduce : local_rank=0, metric[0]=tensor(690594.1250, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(3127., device='cuda:0'), metric[2]=tensor(27000., device='cuda:0')
+validation : local_rank=0, metric[0]=tensor(216301.2812, device='cuda:0'), metric[1]=tensor(1437., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+epoch is 0, loss_train is 25.577560424804688, acc_train is 0.11581481248140335, loss_val is 15.879048347473145, acc_val is 0.10714814811944962
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  5.11it/s] 33%|███▎      | 1/3 [00:00<00:00,  5.11it/s] 67%|██████▋   | 2/3 [00:00<00:00,  6.86it/s] 67%|██████▋   | 2/3 [00:00<00:00,  6.86it/s]100%|██████████| 3/3 [00:00<00:00,  7.58it/s]100%|██████████| 3/3 [00:00<00:00,  7.58it/s]
+
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=3500
+train : local_rank=1, metric[0]=tensor(179608.5938, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(1931., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+train_reduce : local_rank=1, metric[0]=tensor(179608.5938, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(1931., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+validation : local_rank=1, metric[0]=tensor(200225.5312, device='cuda:1'), metric[1]=tensor(1525., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+  0%|          | 0/3 [00:00<?, ?it/s]local_rank=0, len(y)=5000
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=3500
+train : local_rank=0, metric[0]=tensor(179387.2656, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(1958., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+train_reduce : local_rank=0, metric[0]=tensor(358995.8750, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(3889., device='cuda:0'), metric[2]=tensor(27000., device='cuda:0')
+validation : local_rank=0, metric[0]=tensor(200232.1250, device='cuda:0'), metric[1]=tensor(1482., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+epoch is 1, loss_train is 13.296143531799316, acc_train is 0.14403703808784485, loss_val is 14.831765174865723, acc_val is 0.11137036979198456
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.41it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.56it/s] 67%|██████▋   | 2/3 [00:00<00:00,  8.69it/s] 67%|██████▋   | 2/3 [00:00<00:00,  8.63it/s]100%|██████████| 3/3 [00:00<00:00,  9.98it/s]100%|██████████| 3/3 [00:00<00:00,  9.93it/s]
+
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=3500
+train : local_rank=1, metric[0]=tensor(116030.0469, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(2546., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+train_reduce : local_rank=1, metric[0]=tensor(116030.0469, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(2546., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+validation : local_rank=1, metric[0]=tensor(101866.1875, device='cuda:1'), metric[1]=tensor(1929., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+  0%|          | 0/3 [00:00<?, ?it/s]local_rank=0, len(y)=5000
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=3500
+train : local_rank=0, metric[0]=tensor(117734.2266, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(2471., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+train_reduce : local_rank=0, metric[0]=tensor(233764.2812, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(5017., device='cuda:0'), metric[2]=tensor(27000., device='cuda:0')
+validation : local_rank=0, metric[0]=tensor(103236.8516, device='cuda:0'), metric[1]=tensor(1944., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+epoch is 2, loss_train is 8.657936096191406, acc_train is 0.18581481277942657, loss_val is 7.596408367156982, acc_val is 0.14344444870948792
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  8.81it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.02it/s] 67%|██████▋   | 2/3 [00:00<00:00,  9.31it/s] 67%|██████▋   | 2/3 [00:00<00:00,  9.40it/s]100%|██████████| 3/3 [00:00<00:00, 10.32it/s]100%|██████████| 3/3 [00:00<00:00, 10.41it/s]
+
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=3500
+train : local_rank=1, metric[0]=tensor(108637.5156, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(2821., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+train_reduce : local_rank=1, metric[0]=tensor(108637.5156, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(2821., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+validation : local_rank=1, metric[0]=tensor(100207.8984, device='cuda:1'), metric[1]=tensor(2348., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=3500
+train : local_rank=0, metric[0]=tensor(106619.4609, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(2843., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+train_reduce : local_rank=0, metric[0]=tensor(215256.9688, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(5664., device='cuda:0'), metric[2]=tensor(27000., device='cuda:0')
+validation : local_rank=0, metric[0]=tensor(101961.5625, device='cuda:0'), metric[1]=tensor(2246., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+epoch is 3, loss_train is 7.972480297088623, acc_train is 0.20977777242660522, loss_val is 7.487758159637451, acc_val is 0.17014814913272858
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.41it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.41it/s] 67%|██████▋   | 2/3 [00:00<00:00,  9.17it/s] 67%|██████▋   | 2/3 [00:00<00:00,  9.17it/s]100%|██████████| 3/3 [00:00<00:00, 10.31it/s]100%|██████████| 3/3 [00:00<00:00, 10.31it/s]
+
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=3500
+train : local_rank=1, metric[0]=tensor(96546.3828, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(3012., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+train_reduce : local_rank=1, metric[0]=tensor(96546.3828, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(3012., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+validation : local_rank=1, metric[0]=tensor(86410.8125, device='cuda:1'), metric[1]=tensor(2893., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+  0%|          | 0/3 [00:00<?, ?it/s]local_rank=0, len(y)=5000
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=3500
+train : local_rank=0, metric[0]=tensor(96164.6094, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(3092., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+train_reduce : local_rank=0, metric[0]=tensor(192711., device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(6104., device='cuda:0'), metric[2]=tensor(27000., device='cuda:0')
+validation : local_rank=0, metric[0]=tensor(85693.6719, device='cuda:0'), metric[1]=tensor(2907., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+epoch is 4, loss_train is 7.137444496154785, acc_train is 0.22607406973838806, loss_val is 6.374240398406982, acc_val is 0.21481481194496155
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.59it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.62it/s] 67%|██████▋   | 2/3 [00:00<00:00,  9.26it/s] 67%|██████▋   | 2/3 [00:00<00:00,  9.27it/s]100%|██████████| 3/3 [00:00<00:00,  7.61it/s]100%|██████████| 3/3 [00:00<00:00,  7.61it/s]100%|██████████| 3/3 [00:00<00:00,  7.80it/s]100%|██████████| 3/3 [00:00<00:00,  7.81it/s]
+
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=3500
+train : local_rank=0, metric[0]=tensor(84342.3125, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(3296., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+train_reduce : local_rank=0, metric[0]=tensor(168955.3594, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(6559., device='cuda:0'), metric[2]=tensor(27000., device='cuda:0')
+validation : local_rank=0, metric[0]=tensor(75957.2344, device='cuda:0'), metric[1]=tensor(3166., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+epoch is 5, loss_train is 6.257606029510498, acc_train is 0.24292592704296112, loss_val is 5.643190860748291, acc_val is 0.23133333027362823
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=3500
+train : local_rank=1, metric[0]=tensor(84613.0469, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(3263., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+train_reduce : local_rank=1, metric[0]=tensor(84613.0469, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(3263., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+validation : local_rank=1, metric[0]=tensor(76408.9297, device='cuda:1'), metric[1]=tensor(3080., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.50it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.51it/s] 67%|██████▋   | 2/3 [00:00<00:00,  6.09it/s] 67%|██████▋   | 2/3 [00:00<00:00,  6.08it/s]100%|██████████| 3/3 [00:00<00:00,  7.79it/s]100%|██████████| 3/3 [00:00<00:00,  7.79it/s]
+
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=3500
+train : local_rank=1, metric[0]=tensor(97647.2969, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(3408., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+train_reduce : local_rank=1, metric[0]=tensor(97647.2969, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(3408., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+validation : local_rank=1, metric[0]=tensor(68198.6250, device='cuda:1'), metric[1]=tensor(3181., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=3500
+train : local_rank=0, metric[0]=tensor(97419., device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(3414., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+train_reduce : local_rank=0, metric[0]=tensor(195066.2969, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(6822., device='cuda:0'), metric[2]=tensor(27000., device='cuda:0')
+validation : local_rank=0, metric[0]=tensor(68646.1641, device='cuda:0'), metric[1]=tensor(3220., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+epoch is 6, loss_train is 7.224677562713623, acc_train is 0.2526666522026062, loss_val is 5.068325042724609, acc_val is 0.237074077129364
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.44it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.44it/s] 67%|██████▋   | 2/3 [00:00<00:00,  6.01it/s] 67%|██████▋   | 2/3 [00:00<00:00,  6.01it/s]100%|██████████| 3/3 [00:00<00:00,  7.38it/s]100%|██████████| 3/3 [00:00<00:00,  7.38it/s]
+
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=3500
+train : local_rank=1, metric[0]=tensor(63736.1484, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(3642., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+train_reduce : local_rank=1, metric[0]=tensor(63736.1484, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(3642., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+validation : local_rank=1, metric[0]=tensor(52665.9297, device='cuda:1'), metric[1]=tensor(3234., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+  0%|          | 0/3 [00:00<?, ?it/s]local_rank=0, len(y)=5000
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=3500
+train : local_rank=0, metric[0]=tensor(64659.3594, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(3612., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+train_reduce : local_rank=0, metric[0]=tensor(128395.5078, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(7254., device='cuda:0'), metric[2]=tensor(27000., device='cuda:0')
+validation : local_rank=0, metric[0]=tensor(52780.6914, device='cuda:0'), metric[1]=tensor(3227., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+epoch is 7, loss_train is 4.755389213562012, acc_train is 0.26866665482521057, loss_val is 3.905430555343628, acc_val is 0.2392963021993637
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  5.18it/s] 33%|███▎      | 1/3 [00:00<00:00,  5.21it/s] 67%|██████▋   | 2/3 [00:00<00:00,  6.90it/s] 67%|██████▋   | 2/3 [00:00<00:00,  6.88it/s]100%|██████████| 3/3 [00:00<00:00,  7.92it/s]100%|██████████| 3/3 [00:00<00:00,  7.94it/s]
+
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=3500
+train : local_rank=1, metric[0]=tensor(56353.3555, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(3721., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+train_reduce : local_rank=1, metric[0]=tensor(56353.3555, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(3721., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+validation : local_rank=1, metric[0]=tensor(49597.3906, device='cuda:1'), metric[1]=tensor(3459., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=3500
+train : local_rank=0, metric[0]=tensor(56001.4609, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(3734., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+train_reduce : local_rank=0, metric[0]=tensor(112354.8125, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(7455., device='cuda:0'), metric[2]=tensor(27000., device='cuda:0')
+validation : local_rank=0, metric[0]=tensor(49538.8906, device='cuda:0'), metric[1]=tensor(3466., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+epoch is 8, loss_train is 4.161289215087891, acc_train is 0.2761111259460449, loss_val is 3.6717140674591064, acc_val is 0.25648146867752075
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.22it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.15it/s] 67%|██████▋   | 2/3 [00:00<00:00,  9.44it/s] 67%|██████▋   | 2/3 [00:00<00:00,  9.42it/s]100%|██████████| 3/3 [00:00<00:00, 10.47it/s]100%|██████████| 3/3 [00:00<00:00, 10.47it/s]
+
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=3500
+train : local_rank=1, metric[0]=tensor(56136.8047, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(3801., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+train_reduce : local_rank=1, metric[0]=tensor(56136.8047, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(3801., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+validation : local_rank=1, metric[0]=tensor(69622.7812, device='cuda:1'), metric[1]=tensor(3290., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+  0%|          | 0/3 [00:00<?, ?it/s]local_rank=0, len(y)=5000
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=3500
+train : local_rank=0, metric[0]=tensor(56210.4922, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(3917., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+train_reduce : local_rank=0, metric[0]=tensor(112347.2969, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(7718., device='cuda:0'), metric[2]=tensor(27000., device='cuda:0')
+validation : local_rank=0, metric[0]=tensor(69310.5234, device='cuda:0'), metric[1]=tensor(3256., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+epoch is 9, loss_train is 4.161011219024658, acc_train is 0.2858518660068512, loss_val is 5.1456780433654785, acc_val is 0.24244444072246552
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.11it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.40it/s] 67%|██████▋   | 2/3 [00:00<00:00,  8.61it/s] 67%|██████▋   | 2/3 [00:00<00:00,  8.51it/s]100%|██████████| 3/3 [00:00<00:00,  9.88it/s]
+100%|██████████| 3/3 [00:00<00:00,  9.68it/s]
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=3500
+train : local_rank=1, metric[0]=tensor(67182.8594, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(3796., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+train_reduce : local_rank=1, metric[0]=tensor(67182.8594, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(3796., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+validation : local_rank=1, metric[0]=tensor(64995.9023, device='cuda:1'), metric[1]=tensor(3441., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=3500
+train : local_rank=0, metric[0]=tensor(67749.6328, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(3754., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+train_reduce : local_rank=0, metric[0]=tensor(134932.5000, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(7550., device='cuda:0'), metric[2]=tensor(27000., device='cuda:0')
+validation : local_rank=0, metric[0]=tensor(65443.1797, device='cuda:0'), metric[1]=tensor(3364., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+epoch is 10, loss_train is 4.997499942779541, acc_train is 0.2796296179294586, loss_val is 4.8310770988464355, acc_val is 0.25203704833984375
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.29it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.13it/s] 67%|██████▋   | 2/3 [00:00<00:00,  8.53it/s] 67%|██████▋   | 2/3 [00:00<00:00,  8.56it/s]100%|██████████| 3/3 [00:00<00:00,  9.83it/s]
+100%|██████████| 3/3 [00:00<00:00,  9.75it/s]
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=3500
+train : local_rank=1, metric[0]=tensor(56231.4727, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(3775., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+train_reduce : local_rank=1, metric[0]=tensor(56231.4727, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(3775., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+validation : local_rank=1, metric[0]=tensor(52995.0547, device='cuda:1'), metric[1]=tensor(3864., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=3500
+train : local_rank=0, metric[0]=tensor(55425.7344, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(3924., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+train_reduce : local_rank=0, metric[0]=tensor(111657.2031, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(7699., device='cuda:0'), metric[2]=tensor(27000., device='cuda:0')
+validation : local_rank=0, metric[0]=tensor(53824.5781, device='cuda:0'), metric[1]=tensor(3703., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+epoch is 11, loss_train is 4.135451793670654, acc_train is 0.28514814376831055, loss_val is 3.956282615661621, acc_val is 0.28025925159454346
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.44it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.44it/s] 67%|██████▋   | 2/3 [00:00<00:00,  8.73it/s] 67%|██████▋   | 2/3 [00:00<00:00,  8.73it/s]100%|██████████| 3/3 [00:00<00:00,  6.87it/s]100%|██████████| 3/3 [00:00<00:00,  6.87it/s]100%|██████████| 3/3 [00:00<00:00,  7.15it/s]100%|██████████| 3/3 [00:00<00:00,  7.15it/s]
+
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=3500
+train : local_rank=1, metric[0]=tensor(47809.4297, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(3996., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+train_reduce : local_rank=1, metric[0]=tensor(47809.4297, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(3996., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+validation : local_rank=1, metric[0]=tensor(41619.2461, device='cuda:1'), metric[1]=tensor(3666., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+  0%|          | 0/3 [00:00<?, ?it/s]local_rank=0, len(y)=5000
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=3500
+train : local_rank=0, metric[0]=tensor(47826.7031, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(4043., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+train_reduce : local_rank=0, metric[0]=tensor(95636.1328, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(8039., device='cuda:0'), metric[2]=tensor(27000., device='cuda:0')
+validation : local_rank=0, metric[0]=tensor(41838.7266, device='cuda:0'), metric[1]=tensor(3571., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+epoch is 12, loss_train is 3.542078971862793, acc_train is 0.29774072766304016, loss_val is 3.091035842895508, acc_val is 0.2680370509624481
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.55it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.58it/s] 67%|██████▋   | 2/3 [00:00<00:00,  6.37it/s] 67%|██████▋   | 2/3 [00:00<00:00,  6.37it/s]100%|██████████| 3/3 [00:00<00:00,  8.06it/s]
+100%|██████████| 3/3 [00:00<00:00,  8.05it/s]
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=3500
+train : local_rank=1, metric[0]=tensor(43477.9766, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(3965., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+train_reduce : local_rank=1, metric[0]=tensor(43477.9766, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(3965., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+validation : local_rank=1, metric[0]=tensor(51581.3672, device='cuda:1'), metric[1]=tensor(3852., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+  0%|          | 0/3 [00:00<?, ?it/s]local_rank=0, len(y)=5000
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=3500
+train : local_rank=0, metric[0]=tensor(43186.8984, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(4065., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+train_reduce : local_rank=0, metric[0]=tensor(86664.8750, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(8030., device='cuda:0'), metric[2]=tensor(27000., device='cuda:0')
+validation : local_rank=0, metric[0]=tensor(52214.7852, device='cuda:0'), metric[1]=tensor(3698., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+epoch is 13, loss_train is 3.209810256958008, acc_train is 0.2974074184894562, loss_val is 3.844302177429199, acc_val is 0.2796296179294586
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.59it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.44it/s] 67%|██████▋   | 2/3 [00:00<00:00,  5.75it/s] 67%|██████▋   | 2/3 [00:00<00:00,  5.73it/s]100%|██████████| 3/3 [00:00<00:00,  7.22it/s]100%|██████████| 3/3 [00:00<00:00,  7.20it/s]
+
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=3500
+train : local_rank=1, metric[0]=tensor(45773.8125, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(4077., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+train_reduce : local_rank=1, metric[0]=tensor(45773.8125, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(4077., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+validation : local_rank=1, metric[0]=tensor(36776.3984, device='cuda:1'), metric[1]=tensor(4128., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+  0%|          | 0/3 [00:00<?, ?it/s]local_rank=0, len(y)=5000
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=3500
+train : local_rank=0, metric[0]=tensor(46101.4609, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(4145., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+train_reduce : local_rank=0, metric[0]=tensor(91875.2734, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(8222., device='cuda:0'), metric[2]=tensor(27000., device='cuda:0')
+validation : local_rank=0, metric[0]=tensor(37232.7969, device='cuda:0'), metric[1]=tensor(3964., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+epoch is 14, loss_train is 3.402787923812866, acc_train is 0.30451852083206177, loss_val is 2.7410812377929688, acc_val is 0.2997037172317505
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  5.31it/s] 33%|███▎      | 1/3 [00:00<00:00,  5.29it/s] 67%|██████▋   | 2/3 [00:00<00:00,  7.20it/s] 67%|██████▋   | 2/3 [00:00<00:00,  7.09it/s]100%|██████████| 3/3 [00:00<00:00,  7.70it/s]100%|██████████| 3/3 [00:00<00:00,  7.69it/s]
+
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=3500
+train : local_rank=1, metric[0]=tensor(37255.9688, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(4193., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+train_reduce : local_rank=1, metric[0]=tensor(37255.9688, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(4193., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+validation : local_rank=1, metric[0]=tensor(42296.9648, device='cuda:1'), metric[1]=tensor(3942., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=3500
+train : local_rank=0, metric[0]=tensor(37629.1172, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(4298., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+train_reduce : local_rank=0, metric[0]=tensor(74885.0859, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(8491., device='cuda:0'), metric[2]=tensor(27000., device='cuda:0')
+validation : local_rank=0, metric[0]=tensor(42796.3555, device='cuda:0'), metric[1]=tensor(3832., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+epoch is 15, loss_train is 2.773521661758423, acc_train is 0.3144814670085907, loss_val is 3.151604413986206, acc_val is 0.28792592883110046
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  8.94it/s] 33%|███▎      | 1/3 [00:00<00:00,  8.94it/s] 67%|██████▋   | 2/3 [00:00<00:00,  8.54it/s] 67%|██████▋   | 2/3 [00:00<00:00,  8.54it/s]100%|██████████| 3/3 [00:00<00:00,  9.25it/s]
+100%|██████████| 3/3 [00:00<00:00,  9.25it/s]
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=3500
+train : local_rank=1, metric[0]=tensor(40653.3867, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(4188., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+train_reduce : local_rank=1, metric[0]=tensor(40653.3867, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(4188., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+validation : local_rank=1, metric[0]=tensor(39993.3125, device='cuda:1'), metric[1]=tensor(4208., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+  0%|          | 0/3 [00:00<?, ?it/s]local_rank=0, len(y)=5000
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=3500
+train : local_rank=0, metric[0]=tensor(40129.5547, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(4309., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+train_reduce : local_rank=0, metric[0]=tensor(80782.9375, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(8497., device='cuda:0'), metric[2]=tensor(27000., device='cuda:0')
+validation : local_rank=0, metric[0]=tensor(39840.3320, device='cuda:0'), metric[1]=tensor(4210., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+epoch is 16, loss_train is 2.9919607639312744, acc_train is 0.31470370292663574, loss_val is 2.956801414489746, acc_val is 0.3117777705192566
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.58it/s] 33%|███▎      | 1/3 [00:00<00:00,  8.10it/s] 67%|██████▋   | 2/3 [00:00<00:00,  8.91it/s] 67%|██████▋   | 2/3 [00:00<00:00,  9.58it/s]100%|██████████| 3/3 [00:00<00:00,  9.72it/s]100%|██████████| 3/3 [00:00<00:00,  9.16it/s]
+
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=3500
+train : local_rank=1, metric[0]=tensor(38498.8203, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(4365., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+train_reduce : local_rank=1, metric[0]=tensor(38498.8203, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(4365., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+validation : local_rank=1, metric[0]=tensor(41015.8047, device='cuda:1'), metric[1]=tensor(4255., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=3500
+train : local_rank=0, metric[0]=tensor(38511.6602, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(4465., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+train_reduce : local_rank=0, metric[0]=tensor(77010.4844, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(8830., device='cuda:0'), metric[2]=tensor(27000., device='cuda:0')
+validation : local_rank=0, metric[0]=tensor(41719.0820, device='cuda:0'), metric[1]=tensor(4129., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+epoch is 17, loss_train is 2.8522400856018066, acc_train is 0.3270370364189148, loss_val is 3.0642552375793457, acc_val is 0.3105185329914093
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.65it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.66it/s] 67%|██████▋   | 2/3 [00:00<00:00,  8.82it/s] 67%|██████▋   | 2/3 [00:00<00:00,  8.82it/s]100%|██████████| 3/3 [00:00<00:00, 10.13it/s]
+100%|██████████| 3/3 [00:00<00:00, 10.00it/s]
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=3500
+train : local_rank=1, metric[0]=tensor(35774.3203, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(4409., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+train_reduce : local_rank=1, metric[0]=tensor(35774.3203, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(4409., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+validation : local_rank=1, metric[0]=tensor(36190.8828, device='cuda:1'), metric[1]=tensor(4252., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=3500
+train : local_rank=0, metric[0]=tensor(35623.2773, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(4494., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+train_reduce : local_rank=0, metric[0]=tensor(71397.5938, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(8903., device='cuda:0'), metric[2]=tensor(27000., device='cuda:0')
+validation : local_rank=0, metric[0]=tensor(36307.7109, device='cuda:0'), metric[1]=tensor(4223., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+epoch is 18, loss_train is 2.644355297088623, acc_train is 0.3297407329082489, loss_val is 2.685133218765259, acc_val is 0.31388887763023376
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.56it/s] 33%|███▎      | 1/3 [00:00<00:00,  9.56it/s] 67%|██████▋   | 2/3 [00:00<00:00,  8.17it/s] 67%|██████▋   | 2/3 [00:00<00:00,  8.17it/s]100%|██████████| 3/3 [00:00<00:00,  7.19it/s]100%|██████████| 3/3 [00:00<00:00,  7.52it/s]
+100%|██████████| 3/3 [00:00<00:00,  7.14it/s]100%|██████████| 3/3 [00:00<00:00,  7.49it/s]
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=5000
+local_rank=1, len(y)=3500
+train : local_rank=1, metric[0]=tensor(37982.2969, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(4380., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+train_reduce : local_rank=1, metric[0]=tensor(37982.2969, device='cuda:1', grad_fn=<AddBackward0>), metric[1]=tensor(4380., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+validation : local_rank=1, metric[0]=tensor(37362.9844, device='cuda:1'), metric[1]=tensor(4497., device='cuda:1'), metric[2]=tensor(13500., device='cuda:1')
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=5000
+local_rank=0, len(y)=3500
+train : local_rank=0, metric[0]=tensor(37249.9844, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(4492., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+train_reduce : local_rank=0, metric[0]=tensor(75232.2812, device='cuda:0', grad_fn=<AddBackward0>), metric[1]=tensor(8872., device='cuda:0'), metric[2]=tensor(27000., device='cuda:0')
+validation : local_rank=0, metric[0]=tensor(37625.7109, device='cuda:0'), metric[1]=tensor(4402., device='cuda:0'), metric[2]=tensor(13500., device='cuda:0')
+epoch is 19, loss_train is 2.7863807678222656, acc_train is 0.32859259843826294, loss_val is 2.7773590087890625, acc_val is 0.32959258556365967
+net has been saved in [/hpcfs/cepc/higgsgpu/wuzuofei/weaver/particle_transformer-main/networks/my_script/PFN/my_script_DDP/net_params/net_DDP_test.params]
