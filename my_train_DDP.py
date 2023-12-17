@@ -18,7 +18,7 @@ def main(local_rank, suffix, process, train_set, val_set, test_set):
     DDP_Config.init_ddp(local_rank)
     ########################################################################################################    
                                                 #Hyperparameters
-    epochs=200
+    epochs=20
     batchsize=512
     lr=0.001
     use_bn=True
@@ -74,6 +74,8 @@ def main(local_rank, suffix, process, train_set, val_set, test_set):
 
 
     for epoch in range(epochs):
+        train_set.sampler.set_epoch(epoch) #Essential!!! Otherwize each GPU only get same ntuples every epoch
+        #train_sampler.set_epoch(epoch)    #Same as the above, both are correct
         loss_train,acc_train=my_tools.train_procedure_in_each_epoch(net,train_set,loss,optimizer,local_rank)
         loss_val,acc_val=my_tools.evaluate_accuracy(net,loss,val_set,test=False)
 
@@ -114,7 +116,7 @@ if __name__=='__main__':
     print(f"The number of GPU(s) is {gpu_nums}!")
     #########################################################################################################
     process=['Hbb','Hcc', 'Hgg', 'Hww', 'Hzz', 'Pll', 'Pww_l', 'Pzz_l', 'Pzz_sl']
-    num_data_each_class=300_000
+    num_data_each_class=300_00
     train_val_test=[0.8,0.1,0.1]
     #########################################################################################################
     fimename=[i +'.root' for i in process]

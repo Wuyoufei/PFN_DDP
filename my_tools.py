@@ -136,9 +136,13 @@ def train_procedure_in_each_epoch(net,tran_set,loss,optimizer,local_rank):
     if local_rank==0:
         pbar=tqdm(tran_set)
     net.train()
+    aaa=0
     for X, y in tran_set:
         X=X.cuda()
         y=y.cuda()
+        if aaa==0:
+            print(f'localrank is {local_rank}, X is {X[:,:,1]}')
+            aaa+=1
         optimizer.zero_grad()
         y_hat=net(X) # input_var can be on any device, including CPU
         l=loss(y_hat,y)
